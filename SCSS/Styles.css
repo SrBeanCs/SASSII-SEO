@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+/* RGB */
+body {
+  background-color: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: -moz-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-align-items: stretch;
+  align-items: stretch;
+  perspective: 1000px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+li {
+  transform-origin: center bottom;
+  -moz-flex: 0 0 auto;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  padding: 2rem;
+  margin: 0;
+  width: 20rem;
+  background-color: rgb(80, 81, 79);
+  transition: all 500ms ease-in-out;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 0px 10rem 0px rgba(0, 0, 0, 0.2) inset;
+  z-index: 1;
+  color: #fff;
+  position: relative;
+  perspective: 300px;
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: animationFramesBack ease-in-out 0.5s;
+          animation: animationFramesBack ease-in-out 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+li:hover {
+  background-color: rgb(36, 123, 160);
+  -webkit-animation: animationFrames ease-in-out 0.5s;
+          animation: animationFrames ease-in-out 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 100;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2), 0px 0px 5rem 10px rgba(0, 0, 0, 0.2) inset;
+}
+li .more {
+  -webkit-backface-visibility: hidden;
+  color: #fff;
+  background-color: #6a6b68;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 0.5rem 2rem;
+  transform-origin: center top;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  transform: translateZ(-0.1rem) translateY(0rem) rotateX(-90deg) scaleY(0);
+}
+li:hover .more {
+  background-color: #1b5b76;
+  transform: translateZ(0.01rem) translateY(-0.1rem) rotateX(0) scaleY(1);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 50%;
+  height: 0.75rem;
+  color: #fff;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 0px;
+  border: 1px solid #164b62;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: rgb(242, 95, 92);
+  border-radius: 0px;
+}
+
+@-webkit-keyframes flap {
+  0% {
+    transform: translateZ(-0.1rem) translateY(0rem) rotateX(-90deg) scaleY(0);
+  }
+  80% {
+    transform: translateZ(0.01rem) translateY(-0.1rem) rotateX(20deg) scaleY(1);
+  }
+  100% {
+    transform: translateZ(0.01rem) translateY(-0.1rem) rotateX(0) scaleY(1);
+  }
+}
+
+@keyframes flap {
+  0% {
+    transform: translateZ(-0.1rem) translateY(0rem) rotateX(-90deg) scaleY(0);
+  }
+  80% {
+    transform: translateZ(0.01rem) translateY(-0.1rem) rotateX(20deg) scaleY(1);
+  }
+  100% {
+    transform: translateZ(0.01rem) translateY(-0.1rem) rotateX(0) scaleY(1);
+  }
+}
+@-webkit-keyframes animationFrames {
+  0% {
+    transform: translateZ(0rem) translateY(0rem) rotateX(0);
+  }
+  60% {
+    transform: scale(1.1) translateZ(1rem) translateY(4rem) rotateX(-10deg);
+  }
+  100% {
+    transform: scale(1.1) translateZ(1rem) translateY(0rem) rotateX(0deg);
+  }
+}
+@keyframes animationFrames {
+  0% {
+    transform: translateZ(0rem) translateY(0rem) rotateX(0);
+  }
+  60% {
+    transform: scale(1.1) translateZ(1rem) translateY(4rem) rotateX(-10deg);
+  }
+  100% {
+    transform: scale(1.1) translateZ(1rem) translateY(0rem) rotateX(0deg);
+  }
+}
+@-webkit-keyframes animationFramesBack {
+  0% {
+    transform: scale(1.1) translateZ(1rem) translateY(0rem) rotateX(0deg);
+  }
+  60% {
+    transform: scale(1) translateZ(-0.5rem) translateY(-4rem) rotateX(10deg);
+  }
+  100% {
+    transform: scale(1) translateZ(0rem) translateY(0rem) rotateX(0);
+  }
+}
+@keyframes animationFramesBack {
+  0% {
+    transform: scale(1.1) translateZ(1rem) translateY(0rem) rotateX(0deg);
+  }
+  60% {
+    transform: scale(1) translateZ(-0.5rem) translateY(-4rem) rotateX(10deg);
+  }
+  100% {
+    transform: scale(1) translateZ(0rem) translateY(0rem) rotateX(0);
+  }
+}
+figure.stats {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+figure.stats .value {
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+figure.stats figcaption {
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+figure.stats figcaption p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.chart {
+  max-width: 250px;
+}
+.chart polyline {
+  stroke: rgb(242, 95, 92);
+}
+
+.piechart {
+  max-width: 250px;
+}
+.piechart circle {
+  stroke: rgb(242, 95, 92);
+  fill: rgb(255, 224, 102);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100px;
+  font-size: 10px;
+  margin: 5px;
+  font-family: "Heebo", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 10px;
+}
+
+.active {
+  background-color: #848c57;
+  width: 150px;
+  color: white;
+}
+
+.disabled {
+  background-color: #c6d6b0;
+  width: 90px;
+}
+
+.visited {
+  background-color: #e6d4a2;
+  width: 100px;
+}
+
+.btn-a, .btn-b {
+  background: #777;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 100px;
+  height: 50px;
+  float: left;
+}
+
+.btn-b {
+  background: #ff0;
+}/*# sourceMappingURL=Styles.css.map */
